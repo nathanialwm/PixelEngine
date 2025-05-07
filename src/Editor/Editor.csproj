@@ -12,6 +12,7 @@
     <!-- Reference your engine DLLs -->
     <ProjectReference Include="..\Engine\Contracts.csproj" />
     <ProjectReference Include="..\Engine\Core.csproj" />
+    <Page Include="MainWindow.xaml" />
   </ItemGroup>
 
 </Project>
