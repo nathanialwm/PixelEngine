@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -7,5 +7,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Reference your engine DLLs -->
+    <ProjectReference Include="..\Engine\Contracts.csproj" />
+    <ProjectReference Include="..\Engine\Core.csproj" />
+  </ItemGroup>
 
 </Project>
