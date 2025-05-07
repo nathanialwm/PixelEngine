@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-namespace Engine.Contracts
+using OpenTK;
+using OpenTK.Graphics;
+
+namespace PixelEngine.Contracts
 {
 
 
@@ -42,7 +45,7 @@ namespace Engine.Contracts
         /// <summary>
         /// Queue a textured quad for drawing next frame.
         /// </summary>
-        void DrawSprite(TextureHandle handle, Vector2 position, RectangleF sourceRect);
+        void DrawSprite(int texture, int position, int sourceRect); // temp placeholder ints, actually need Vector2 and RectangleF
 
         /// <summary>
         /// Flushes all queued sprites to the screen.
@@ -50,6 +53,10 @@ namespace Engine.Contracts
         void Flush();
     }
 
+    public interface ITextureService
+    {
+
+    }
     public interface IInputService
     {
         bool IsActionPressed(string actionName);
@@ -58,8 +65,8 @@ namespace Engine.Contracts
 
     public interface IAudioService
     {
-        SoundHandle LoadSound(string path);
-        void PlaySound(SoundHandle sound, float volume = 1f);
+        int LoadSound(string path); // placeholder int, actually need SoundHandle type
+        void PlaySound(int sound, float volume = 1f); // placeholder int, actually need SoundHandle type
     }
 
 
